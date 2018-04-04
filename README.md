@@ -66,3 +66,25 @@ const AllTogether = () => (
   </Counter.Provider>
 );
 ```
+
+## Huh?
+
+`createMotive` returns a `Provider` and `Consumer`. The `Provider` is the boring part and needs to wrap any instance of the corresponding `Consumer`. The `Consumer` component takes a render prop as a child
+
+## Documentation
+
+### `createMotive(defaultState: Object): { Provider: React.Component, Consumer: React.Component }`
+
+`createMotive` returns an object with a `Provider` component and a `Consumer` component.
+
+```js
+const defaultState = { count: 1 };
+
+const { Provider, Consumer } = createMotive(defaultState);
+```
+
+### `<Provider>`
+
+The `Provider` is a React component that should wrap all of its corresponding `Consumer` components. This component holds all of the state given from `defaultState` and that is updated later on.
+
+### `<Consumer>`
