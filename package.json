@@ -8,7 +8,8 @@
   "scripts": {
     "clean": "rm -rf lib",
     "build": "rollup -c",
-    "dev": "parcel example/index.html"
+    "dev": "parcel example/index.html",
+    "prepublish": "yarn clean && yarn build"
   },
   "files": ["lib"],
   "peerDependencies": {
