@@ -1,6 +1,6 @@
 {
   "name": "react-motive",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "license": "MIT",
   "main": "lib/react-motive.js",
   "module": "lib/react-motive.es.js",
