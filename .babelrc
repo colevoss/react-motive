@@ -1,3 +1,28 @@
 {
-  "presets": ["./.babelrc.js"]
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false,
+        "loose": true,
+        "target": { "browsers": ["last 1 version"] }
+      }
+    ],
+    "react"
+  ],
+  "env": {
+    "cjs": {
+      "plugins": [
+        "transform-class-properties",
+        "transform-es2015-modules-commonjs"
+      ]
+    },
+    "test": {
+      "plugins": [
+        "transform-class-properties",
+        "transform-es2015-modules-commonjs"
+      ]
+    }
+  },
+  "plugins": ["transform-class-properties"]
 }

@@ -21,7 +21,7 @@ export const createMotive = (defaultState = {}) => {
 
     dispatch = (action) => {
       this.setState((state) => ({
-        state: reduce(action)(state, this.dispatch),
+        state: reduce(action)(state),
       }));
     };
 

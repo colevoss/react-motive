@@ -10,7 +10,8 @@ const decrement = ({ count }) => {
   };
 };
 
-const increment = ({ count }, dispatch) => {
+const increment = (delay = false) => ({ count }, dispatch) => {
+  setTimeout(() => dispatch(increment), 2000);
   return {
     count: count + 1,
   };

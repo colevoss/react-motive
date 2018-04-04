@@ -26,5 +26,9 @@ export default {
     ...Object.keys(pkg.peerDependencies || {}),
   ],
   // plugins: [babel({ presets: '../.babelrc.js' })],
-  plugins: [babel()],
+  plugins: [
+    babel({
+      externalHelpers: true,
+    }),
+  ],
 };

@@ -73,7 +73,7 @@ const AllTogether = () => (
 
 ## Documentation
 
-### `createMotive(defaultState: Object): { Provider: React.Component, Consumer: React.Component }`
+#### `createMotive`
 
 `createMotive` returns an object with a `Provider` component and a `Consumer` component.
 
@@ -83,8 +83,65 @@ const defaultState = { count: 1 };
 const { Provider, Consumer } = createMotive(defaultState);
 ```
 
-### `<Provider>`
+#### `<Provider>`
 
 The `Provider` is a React component that should wrap all of its corresponding `Consumer` components. This component holds all of the state given from `defaultState` and that is updated later on.
 
-### `<Consumer>`
+#### `<Consumer>`
+
+The `Consumer` component is what you can use anywhere as long as its a child of the corresponding `Provider` component. Use this component to get access to the state of its `Provider` and to dispatch updates to that state.
+
+```js
+<Consumer>
+  {({ state, dispatch }) => /* ... some react stuff that uses state or dispatch */ }
+</Consumer>
+```
+
+This component takes a render prop as its child. This render prop is given an object with the following members in it.
+
+##### `state`
+
+This is the current state of the corresponding `Provider` component.
+
+#### `dispatch`
+
+`dispatch` should be called with an `action` function. An `action` should return a slice of new state to be merged into the `Provider`'s state.
+
+#### Actions
+
+Actions are provided with the same argument as the `Consumer`'s render prop. You have access to the current state, and the `dispatch` function. This means you can dispatch other actions from an action if necessary.
+
+An action must return a partial version of state.
+
+**Pro Tip:**: If you need to give actions data, write them as curried functions and call them into `dispatch` with any arugments that they might need.
+
+```js
+/**
+ * Basic action
+ */
+const increment = (state) => ({
+  count: state.count + 1,
+});
+
+dispatch(increment);
+
+/**
+ * Curried action that takes arguments
+ */
+const incrementBy = (incrBy) => (state) => ({
+  count: state.count + incrBy,
+});
+
+dipatch(incrementBy(2));
+
+/**
+ * Action that dispatches another action
+ */
+const delayedIncrement = (state, dispatch) => {
+  setTimeout(() => dispatch(delayedIncrement));
+
+  return {
+    count: state.count + 1,
+  };
+};
+```

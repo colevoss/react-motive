@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/colevoss/.nvm/versions/node/v8.9.4/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js test
+  /Users/colevoss/.nvm/versions/node/v8.9.4/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js build
 
 PATH: 
   /Users/colevoss/google-cloud-sdk/bin:/Users/colevoss/.rbenv/shims:/Users/colevoss/.nvm/versions/node/v8.9.4/bin:/Users/colevoss/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/colevoss/google-cloud-sdk/bin:/Users/colevoss/.rbenv/shims:/Users/colevoss/.cargo/bin:/Users/colevoss/codes/go-stuff/bin
@@ -16,11 +16,17 @@ Platform:
 npm manifest: 
   {
     "name": "react-motive",
-    "version": "1.0.1",
+    "version": "1.0.4",
     "license": "MIT",
     "main": "lib/react-motive.js",
     "module": "lib/react-motive.es.js",
     "author": "Cole Voss <voss.cole@gmail.com> (http://github.com/colevoss)",
+    "repository": "https://github.com/colevoss/react-motive",
+    "keywords": [
+      "react",
+      "context",
+      "state"
+    ],
     "scripts": {
       "clean": "rm -rf lib",
       "build": "rollup -c",
@@ -38,6 +44,7 @@ npm manifest:
     "devDependencies": {
       "babel-core": "^6.26.0",
       "babel-jest": "^22.4.3",
+      "babel-plugin-external-helpers": "^6.22.0",
       "babel-plugin-transform-class-properties": "^6.24.1",
       "babel-preset-env": "^1.6.1",
       "babel-preset-react": "^6.24.1",
@@ -483,6 +490,12 @@ Lockfile:
   babel-plugin-check-es2015-constants@^6.22.0:
     version "6.22.0"
     resolved "https://registry.yarnpkg.com/babel-plugin-check-es2015-constants/-/babel-plugin-check-es2015-constants-6.22.0.tgz#35157b101426fd2ffd3da3f75c7d1e91835bbf8a"
+    dependencies:
+      babel-runtime "^6.22.0"
+  
+  babel-plugin-external-helpers@^6.22.0:
+    version "6.22.0"
+    resolved "https://registry.yarnpkg.com/babel-plugin-external-helpers/-/babel-plugin-external-helpers-6.22.0.tgz#2285f48b02bd5dede85175caf8c62e86adccefa1"
     dependencies:
       babel-runtime "^6.22.0"
   
@@ -5666,7 +5679,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c jest
+  Arguments: -c rollup -c
   Directory: /Users/colevoss/codes/react-motive
   Output:
   
