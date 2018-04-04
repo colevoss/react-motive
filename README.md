@@ -138,10 +138,12 @@ dipatch(incrementBy(2));
  * Action that dispatches another action
  */
 const delayedIncrement = (state, dispatch) => {
-  setTimeout(() => dispatch(delayedIncrement));
+  setTimeout(() => dispatch(incrementBy(2)));
 
   return {
     count: state.count + 1,
   };
 };
+
+dipatch(delayedIcrement);
 ```
