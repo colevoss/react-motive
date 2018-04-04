@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, Simulate } from 'react-testing-library';
 import 'react-testing-library/extend-expect';
-import { createMotive } from '../src/react-motive';
+import createMotive from '../src/react-motive';
 
 const testAction = () => ({
   updated: 'yes',

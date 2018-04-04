@@ -6,7 +6,7 @@ const reduce = (action) => ({ state, dispatch }) => {
   return Object.assign({}, state, action(state, dispatch));
 };
 
-export const createMotive = (defaultState = {}) => {
+const createMotive = (defaultState = {}) => {
   const { Provider, Consumer } = createContext({ state: defaultState });
 
   class MotiveProvider extends React.Component {
@@ -32,3 +32,5 @@ export const createMotive = (defaultState = {}) => {
 
   return { Provider: MotiveProvider, Consumer };
 };
+
+export default createMotive;
