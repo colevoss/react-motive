@@ -1,6 +1,6 @@
 import React, { createContext } from 'react';
 
-export const reduce = (action) => ({ state, dispatch }) => {
+const reduce = (action) => ({ state, dispatch }) => {
   if (!action) return state;
 
   return Object.assign({}, state, action(state, dispatch));
