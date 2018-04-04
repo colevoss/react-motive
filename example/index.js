@@ -4,15 +4,13 @@ import { createMotive } from '../src/react-motive';
 
 const defaultState = { count: 0 };
 
-const decrement = () => ({ count }) => {
+const decrement = ({ count }) => {
   return {
     count: count - 1,
   };
 };
 
-const increment = () => ({ count }, dispatch) => {
-  count <= 200 && requestAnimationFrame(() => dispatch(increment()));
-
+const increment = ({ count }, dispatch) => {
   return {
     count: count + 1,
   };
@@ -53,8 +51,8 @@ const Controlls = () => {
       {({ dispatch }) => {
         return (
           <div>
-            <button onClick={() => dispatch(decrement())}>-</button>
-            <button onClick={() => dispatch(increment())}>+</button>
+            <button onClick={() => dispatch(decrement)}>-</button>
+            <button onClick={() => dispatch(increment)}>+</button>
           </div>
         );
       }}
