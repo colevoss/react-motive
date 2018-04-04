@@ -15,7 +15,7 @@ yarn add react-motive
 
 ```js
 import React from 'react';
-import { createMotive } from 'react-motive';
+import createMotive from 'react-motive';
 
 /**
  * Default State
