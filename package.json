@@ -1,0 +1,30 @@
+{
+  "name": "react-motive",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "lib/react-motive.js",
+  "module": "lib/react-motive.es.js",
+  "author": "Cole Voss <voss.cole@gmail.com> (http://github.com/colevoss)",
+  "scripts": {
+    "clean": "rm -rf lib",
+    "build": "rollup -c",
+    "dev": "parcel example/index.html"
+  },
+  "files": ["lib"],
+  "peerDependencies": {
+    "prop-types": "^15.6.1",
+    "react": ">=16.3.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "parcel-bundler": "^1.7.0",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
+    "rollup": "^0.57.1",
+    "rollup-plugin-babel": "^3.0.3"
+  }
+}
