@@ -112,11 +112,11 @@ This is the current state of the corresponding `Provider` component.
 
 ### Actions
 
-Actions are provided with the same argument as the `Consumer`'s render prop. You have access to the current state, and the `dispatch` function. This means you can dispatch other actions from an action if necessary.
+Actions are provided with `state` and `dispatch` as arguments. This means you can dispatch other actions from an action if necessary.
 
 An action must return a partial version of state.
 
-**Pro Tip:**: If you need to give actions data, write them as curried functions and call them into `dispatch` with any arugments that they might need.
+**Pro Tip:** If you need to give actions data, write them as curried functions and call them into `dispatch` with any arugments that they might need.
 
 ```js
 /**
