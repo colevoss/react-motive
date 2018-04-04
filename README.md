@@ -10,6 +10,8 @@ yarn add react-motive
 
 ## Example
 
+[![Edit React Motive Counter Example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/ll693wn0pl)
+
 ```js
 import React from 'react';
 import createMotive from 'react-motive';
