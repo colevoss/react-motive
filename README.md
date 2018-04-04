@@ -67,10 +67,6 @@ const AllTogether = () => (
 );
 ```
 
-## Huh?
-
-`createMotive` returns a `Provider` and `Consumer`. The `Provider` is the boring part and needs to wrap any instance of the corresponding `Consumer`. The `Consumer` component takes a render prop as a child
-
 ## Documentation
 
 #### `createMotive`
@@ -107,7 +103,7 @@ This is the current state of the corresponding `Provider` component.
 
 `dispatch` should be called with an `action` function. An `action` should return a slice of new state to be merged into the `Provider`'s state.
 
-#### Actions
+### Actions
 
 Actions are provided with the same argument as the `Consumer`'s render prop. You have access to the current state, and the `dispatch` function. This means you can dispatch other actions from an action if necessary.
 
