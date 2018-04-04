@@ -26,25 +26,6 @@ const Display = () => {
   );
 };
 
-const Exp = () => {
-  return (
-    <TestCotext.Consumer>
-      {({ state: { count } }) => {
-        return (
-          <div
-            style={{
-              width: count * 5,
-              height: 20,
-              background: 'blue',
-              transition: 'width 16ms linear',
-            }}
-          />
-        );
-      }}
-    </TestCotext.Consumer>
-  );
-};
-
 const Controlls = () => {
   return (
     <TestCotext.Consumer>
@@ -66,10 +47,8 @@ const Test = () => {
       <Display />
 
       <Controlls />
-
-      <Exp />
     </TestCotext.Provider>
   );
 };
 
-render(<Test />, document.body);
+render(<Test />, document.getElementById('example'));

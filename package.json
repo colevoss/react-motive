@@ -9,7 +9,8 @@
     "clean": "rm -rf lib",
     "build": "rollup -c",
     "dev": "parcel example/index.html",
-    "prepublish": "yarn clean && yarn build"
+    "prepublish": "yarn clean && yarn build",
+    "test": "jest"
   },
   "files": [
     "lib"
@@ -20,13 +21,16 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.3",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "jest": "^22.4.3",
     "parcel-bundler": "^1.7.0",
     "prop-types": "^15.6.1",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
+    "react-testing-library": "^1.9.5",
     "rollup": "^0.57.1",
     "rollup-plugin-babel": "^3.0.3"
   }
