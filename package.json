@@ -1,16 +1,14 @@
 {
   "name": "react-motive",
+  "description":
+    "Small wrapper around the React Context API with actions/dispatch style state management.",
   "version": "1.0.12",
   "license": "MIT",
   "main": "lib/react-motive.js",
   "module": "lib/react-motive.es.js",
   "author": "Cole Voss <voss.cole@gmail.com> (http://github.com/colevoss)",
   "repository": "https://github.com/colevoss/react-motive",
-  "keywords": [
-    "react",
-    "context",
-    "state"
-  ],
+  "keywords": ["react", "context", "state"],
   "scripts": {
     "clean": "rm -rf lib",
     "build": "rollup -c",
@@ -18,9 +16,7 @@
     "prepublishOnly": "yarn clean && yarn build",
     "test": "jest"
   },
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "peerDependencies": {
     "react": ">=16.3.0"
   },

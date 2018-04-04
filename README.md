@@ -1,11 +1,6 @@
-# React Motive
+# React Motive [![npm](https://img.shields.io/npm/v/react-motive.svg)](https://www.npmjs.com/package/react-motive) [![npm](https://img.shields.io/npm/dm/react-motive.svg)](https://www.npmjs.com/package/react-motive) ![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/react-motive.svg) ![Travis](https://img.shields.io/travis/colevoss/react-motive.svg)
 
-[![npm](https://img.shields.io/npm/v/react-motive.svg)](https://www.npmjs.com/package/react-motive)
-[![npm](https://img.shields.io/npm/dm/react-motive.svg)](https://www.npmjs.com/package/react-motive)
-![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/react-motive.svg)
-![Travis](https://img.shields.io/travis/colevoss/react-motive.svg)
-
-A small wrapper around React 16.3 createContext that adds some easy state management utilities.
+Small wrapper around the React Context API with actions/dispatch style state management.
 
 ## Install
 
