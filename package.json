@@ -5,6 +5,7 @@
   "main": "lib/react-motive.js",
   "module": "lib/react-motive.es.js",
   "author": "Cole Voss <voss.cole@gmail.com> (http://github.com/colevoss)",
+  "repository": "https://github.com/colevoss/react-motive",
   "scripts": {
     "clean": "rm -rf lib",
     "build": "rollup -c",
@@ -12,9 +13,7 @@
     "prepublish": "yarn clean && yarn build",
     "test": "jest"
   },
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "peerDependencies": {
     "prop-types": "^15.6.1",
     "react": ">=16.3.0"
