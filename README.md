@@ -1,5 +1,7 @@
 # React Motive
 
+[![npm](https://img.shields.io/npm/dw/localeval.svg)](https://www.npmjs.com/package/react-motive)
+
 ## Install
 
 ```
