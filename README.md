@@ -2,6 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/react-motive.svg)](https://www.npmjs.com/package/react-motive)
 [![npm](https://img.shields.io/npm/dm/react-motive.svg)](https://www.npmjs.com/package/react-motive)
+![Travis](https://img.shields.io/travis/colevoss/react-motive.svg)
 
 ## Install
 
