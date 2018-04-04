@@ -1,6 +1,6 @@
 {
   "name": "react-motive",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "main": "lib/react-motive.js",
   "module": "lib/react-motive.es.js",
@@ -11,7 +11,9 @@
     "dev": "parcel example/index.html",
     "prepublish": "yarn clean && yarn build"
   },
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "peerDependencies": {
     "prop-types": "^15.6.1",
     "react": ">=16.3.0"
