@@ -51,7 +51,7 @@ const Display = () => (
 
 const Controls = () => (
   <Counter.Consumer>
-    {({ dispath }) => (
+    {({ dispatch }) => (
       <React.Fragment>
         <button onClick={() => dispatch(decrement())}>-</button>
         <button onClick={() => dispatch(increment())}>+</button>
