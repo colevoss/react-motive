@@ -1,9 +1,9 @@
 import React, { createContext } from 'react';
 
-const reduce = (action) => ({ state, dispatch }) => {
+const reduce = (action) => ({ state, dispatch, ...rest }) => {
   if (!action) return state;
 
-  const newState = action(state, dispatch);
+  const newState = action(state, dispatch, rest);
 
   return {
     ...state,
