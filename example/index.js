@@ -10,10 +10,9 @@ const decrement = ({ count }) => {
   };
 };
 
-const increment = (delay = false) => ({ count }, dispatch) => {
-  setTimeout(() => dispatch(increment), 2000);
+const increment = (state, dispatch) => {
   return {
-    count: count + 1,
+    count: state.count + 1,
   };
 };
 
@@ -22,7 +21,9 @@ const TestCotext = createMotive(defaultState);
 const Display = () => {
   return (
     <TestCotext.Consumer>
-      {({ state }) => <h1>Count: {state.count}</h1>}
+      {({ state }) => {
+        return <h1>Count: {state.count}</h1>;
+      }}
     </TestCotext.Consumer>
   );
 };

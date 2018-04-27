@@ -3,7 +3,12 @@ import React, { createContext } from 'react';
 const reduce = (action) => ({ state, dispatch }) => {
   if (!action) return state;
 
-  return Object.assign({}, state, action(state, dispatch));
+  const newState = action(state, dispatch);
+
+  return {
+    ...state,
+    ...newState,
+  };
 };
 
 const createMotive = (defaultState = {}) => {
@@ -16,6 +21,7 @@ const createMotive = (defaultState = {}) => {
       this.state = {
         state: defaultState,
         dispatch: this.dispatch,
+        ...(props.inject || {}),
       };
     }
 

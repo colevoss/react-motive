@@ -13,16 +13,18 @@
   "env": {
     "cjs": {
       "plugins": [
+        "transform-object-rest-spread",
         "transform-class-properties",
         "transform-es2015-modules-commonjs"
       ]
     },
     "test": {
       "plugins": [
+        "transform-object-rest-spread",
         "transform-class-properties",
         "transform-es2015-modules-commonjs"
       ]
     }
   },
-  "plugins": ["transform-class-properties"]
+  "plugins": ["transform-object-rest-spread", "transform-class-properties"]
 }
