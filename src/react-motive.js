@@ -5,6 +5,10 @@ const reduce = (action) => ({ state, dispatch, ...rest }) => {
 
   const newState = action(state, dispatch, rest);
 
+  if (newState === null || newState === undefined) {
+    return state;
+  }
+
   return {
     ...state,
     ...newState,
