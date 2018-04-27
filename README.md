@@ -24,7 +24,7 @@ const defaultState = { count: 0 };
 /**
  * Actions:
  *
- * Actions dont have to be curried functions if they don't take arguments
+ * Actions don't have to be curried functions if they don't take arguments
  * as long as dispatch is given a function that returns a new slice of state.
  */
 const increment = () => ({ count }) => ({
@@ -51,7 +51,7 @@ const Display = () => (
 
 const Controls = () => (
   <Counter.Consumer>
-    {({ dispath }) => (
+    {({ dispatch }) => (
       <React.Fragment>
         <button onClick={() => dispatch(decrement())}>-</button>
         <button onClick={() => dispatch(increment())}>+</button>
@@ -89,7 +89,7 @@ The `Provider` is a React component that should wrap all of its corresponding `C
 
 #### `<Consumer>`
 
-The `Consumer` component is what you can use anywhere as long as its a child of the corresponding `Provider` component. Use this component to get access to the state of its `Provider` and to dispatch updates to that state.
+The `Consumer` component is what you can use anywhere as long as it's a child of the corresponding `Provider` component. Use this component to get access to the state of its `Provider` and to dispatch updates to that state.
 
 ```js
 <Consumer>
@@ -132,7 +132,7 @@ const incrementBy = (incrBy) => (state) => ({
   count: state.count + incrBy,
 });
 
-dipatch(incrementBy(2));
+dispatch(incrementBy(2));
 
 /**
  * Action that dispatches another action
@@ -145,5 +145,5 @@ const delayedIncrement = (state, dispatch) => {
   };
 };
 
-dipatch(delayedIcrement);
+dispatch(delayedIncrement);
 ```
