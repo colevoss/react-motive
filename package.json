@@ -1,7 +1,7 @@
 {
   "name": "react-motive",
   "description": "Small wrapper around the React Context API with actions/dispatch style state management.",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "license": "MIT",
   "main": "lib/react-motive.js",
   "module": "lib/react-motive.es.js",
