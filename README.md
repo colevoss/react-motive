@@ -147,3 +147,30 @@ const delayedIncrement = (state, dispatch) => {
 
 dispatch(delayedIncrement);
 ```
+
+#### `combineActions`
+
+`combineActions` will take two actions and combine their returned updated pieces of state into one updated piece of state.
+
+```js
+const defaultState = {
+  a: 0,
+  b: 0,
+};
+
+const actionA = (state) => {
+  return {
+    a: state.a + 1,
+  };
+};
+
+const actionB = (state) => ({
+  b: state.b + 2,
+});
+
+const combined = combineActions(actionsA, actionB);
+
+const resultingState = dispatch(combined);
+
+resultingState === { a: 1, b: 2 };
+```
