@@ -15,6 +15,15 @@ const reduce = (action) => ({ state, dispatch, ...rest }) => {
   };
 };
 
+export const combineActions = (...actions) => (state, dispatch, rest) => {
+  return actions.reduce((combined, action) => {
+    return {
+      ...combined,
+      ...action(state, dispatch, rest),
+    };
+  }, {});
+};
+
 const createMotive = (defaultState = {}) => {
   const { Provider, Consumer } = createContext({ state: defaultState });
 
